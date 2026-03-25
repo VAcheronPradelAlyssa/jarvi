@@ -1,1 +1,26 @@
-<p>logistics works!</p>
+<section class="logistics-page">
+	<h1 class="main-title">Gérer mon Déplacement à Rennes le mercredi</h1>
+
+	<h2 class="step-title">Dans un premier temps :</h2>
+	<video class="logistics-video" src="/assets/logistics/voiture.mp4" autoplay loop muted playsinline></video>
+	<div class="logistics-text">
+		<p>Je descendrais avec ma super voiture&nbsp;:</p>
+
+		<img class="xsara-img" src="/assets/logistics/xsara.jpg" alt="Ma petite xsara" (click)="toggleZoom()" [class.zoomed]="zoomed" />
+
+		<!-- Overlay pour affichage en grand -->
+		<div class="img-zoom-overlay" *ngIf="zoomed" (click)="toggleZoom()">
+			<img src="/assets/logistics/xsara.jpg" alt="Ma petite xsara en grand" class="img-zoomed" />
+		</div>
+		<p>Ma petite xsara&nbsp;! Je partirais le mardi soir tranquillement et irais dormir dans des chambres Airbnb, etc 🏚️</p>
+        <p class="trajet-info">Temps de trajet : entre 2h et 2h30 selon le trafic et si je prends le péage.<br>
+		Je partirais la veille pour être tranquille et éviter le stress du matin.</p>
+	</div>
+
+	<h2 class="step-title">Dans un second temps :</h2>
+	<video class="logistics-video" src="/assets/logistics/train.mp4" autoplay loop muted playsinline></video>
+	<div class="logistics-text">
+		<p>Je descendrais en train, pour des conditions écologiques et économiques (elle consomme un peu trop 🤭).</p>
+		<p>Même schéma&nbsp;: j'irais dormir quelque part que j'aurais réservé. Pour être sûr, une fois embauché, je ferais toutes mes réservations à l'avance pour être tranquille.</p>
+	</div>
+</section>

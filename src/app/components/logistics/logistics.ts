@@ -1,9 +1,17 @@
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-logistics',
-  imports: [],
-  templateUrl: './logistics.html',
-  styleUrl: './logistics.scss',
+  standalone: true,
+    imports: [NgIf],
+    templateUrl: './logistics.html',
+    styleUrls: ['./logistics.scss'],
 })
-export class Logistics {}
+  export class Logistics {
+  zoomed = false;
+
+  toggleZoom() {
+    this.zoomed = !this.zoomed;
+  }
+}

@@ -1,0 +1,77 @@
+/* Styles pour la page logistics */
+.logistics-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 36px;
+	padding: clamp(18px, 5vw, 60px) 0 60px 0;
+}
+
+.main-title {
+	font-size: clamp(2.1rem, 4vw, 3.2rem);
+	font-family: "Fredoka", sans-serif;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+.step-title {
+	font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+	font-family: "Fredoka", sans-serif;
+	font-weight: 600;
+	margin: 24px 0 10px 0;
+	color: #7a26b5;
+	text-align: center;
+}
+
+.logistics-video {
+	width: min(420px, 90vw);
+	max-width: 100%;
+	border-radius: 18px;
+	box-shadow: 0 4px 18px rgba(38, 18, 59, 0.10);
+	margin-bottom: 12px;
+	background: #e8f4fc;
+}
+
+.logistics-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	font-size: 1.1rem;
+	text-align: center;
+	margin-bottom: 18px;
+}
+
+.xsara-img {
+	width: min(320px, 80vw);
+	border-radius: 14px;
+	margin: 10px 0;
+	box-shadow: 0 2px 10px rgba(38, 18, 59, 0.10);
+	cursor: zoom-in;
+	transition: box-shadow 0.2s;
+}
+.xsara-img.zoomed {
+	box-shadow: 0 0 0 4px #e8f4fc, 0 2px 10px rgba(38, 18, 59, 0.10);
+}
+
+.img-zoom-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(38, 18, 59, 0.45);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	cursor: zoom-out;
+}
+.img-zoomed {
+	max-width: 92vw;
+	max-height: 92vh;
+	border-radius: 18px;
+	box-shadow: 0 8px 32px rgba(38, 18, 59, 0.22);
+	background: #fff;
+}
