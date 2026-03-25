@@ -10,7 +10,7 @@
   box-sizing: border-box;
   overflow: hidden;
 
-  background: url("/assets/fondcv.png") center / cover no-repeat;
+  background: url("/assets/home/fondcv.png") center / cover no-repeat;
 }
 
 .subtitle {
@@ -68,4 +68,16 @@ button {
   transform: rotate(-2.5deg);
   transform-origin: left top;
   backdrop-filter: blur(2px);
+}
+
+/* Image xsara en haut à droite */
+.xsara-img {
+  position: fixed;
+  top: clamp(12px, 2vw, 28px);
+  right: clamp(12px, 2vw, 28px);
+  width: min(70px, 18vw);
+  height: auto;
+  z-index: 40;
+  pointer-events: none;
+  user-select: none;
 }
