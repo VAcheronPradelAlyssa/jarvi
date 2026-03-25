@@ -13,30 +13,34 @@
   background: url("/assets/home/fondcv.png") center / cover no-repeat;
 }
 
+/* Titre principal */
 .subtitle {
-    margin: 0;
-    max-width: min(72ch, 100%);
-    text-align: center;
-    line-height: 1.35;
-    text-wrap: balance;
-    font-size: clamp(1.8rem, 2.8vw, 3rem);
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.25;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
-    background: linear-gradient(90deg, rgb(245, 215, 175) 0%, rgb(240, 169, 235) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  margin: 0;
+  max-width: min(72ch, 100%);
+  text-align: center;
+  line-height: 1.35;
+  text-wrap: balance;
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.08);
+
+  /* Effet gradient texte */
+  background: linear-gradient(90deg, rgb(245,215,175) 0%, rgb(240,169,235) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .subtitle strong {
-  -webkit-text-fill-color: rgba(147, 112, 216, 0.89);
+  -webkit-text-fill-color: rgba(147,112,216,0.89);
   background: none;
   -webkit-background-clip: border-box;
   background-clip: border-box;
 }
 
+/* Bouton principal */
 button {
   margin-top: 0;
   padding: 12px 24px;
@@ -48,8 +52,14 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.18s;
+
+  &:hover, &:focus {
+    background-color: #7a26b5;
+  }
 }
 
+/* Note sticky en haut/gauche */
 .sticker {
   position: fixed;
   top: clamp(12px, 2vw, 28px);
@@ -59,7 +69,7 @@ button {
   padding: 12px 14px;
   border-radius: 14px;
   border: 2px solid rgba(147, 48, 216, 0.22);
-  background: rgba(255, 248, 238, 0.92);
+  background: rgba(255,248,238, 0.92);
   color: #5f347f;
   font-family: "Fredoka", sans-serif;
   font-size: clamp(0.82rem, 1.1vw, 0.98rem);
@@ -69,8 +79,18 @@ button {
   transform-origin: left top;
   backdrop-filter: blur(2px);
 }
+/* Amélioration : Responsive */
+@media (max-width: 700px) {
+  .sticker {
+    font-size: clamp(0.72rem, 2.5vw, 0.93rem);
+    left: clamp(4px, 2vw, 9px);
+    top: clamp(8px, 2vw, 14px);
+    max-width: 99vw;
+    padding: 9px 10px;
+  }
+}
 
-/* Image xsara en haut à droite */
+/* Image xsara en haut à droite, décorative */
 .xsara-img {
   position: fixed;
   top: clamp(12px, 2vw, 28px);
@@ -80,4 +100,13 @@ button {
   z-index: 40;
   pointer-events: none;
   user-select: none;
+}
+
+/* Responsive xsara */
+@media (max-width: 700px) {
+  .xsara-img {
+    width: min(44px, 17vw);
+    top: 4px;
+    right: 4px;
+  }
 }
