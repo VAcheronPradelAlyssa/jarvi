@@ -45,3 +45,23 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.sticker {
+  position: fixed;
+  top: clamp(12px, 2vw, 28px);
+  left: clamp(12px, 2vw, 28px);
+  z-index: 30;
+  max-width: min(88vw, 420px);
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 2px solid rgba(147, 48, 216, 0.22);
+  background: rgba(255, 248, 238, 0.92);
+  color: #5f347f;
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(0.82rem, 1.1vw, 0.98rem);
+  line-height: 1.35;
+  box-shadow: 0 8px 22px rgba(38, 18, 59, 0.16);
+  transform: rotate(-2.5deg);
+  transform-origin: left top;
+  backdrop-filter: blur(2px);
+}
