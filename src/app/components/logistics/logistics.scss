@@ -1,4 +1,19 @@
-/* Styles pour la page logistics */
+.video-replay-btn {
+	display: block;
+	margin: 0 auto 18px auto;
+	padding: 6px 18px;
+	font-size: 1rem;
+	background: #7a26b5;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.video-replay-btn:hover {
+	background: #4e176e;
+}
+
 .logistics-page {
 	display: flex;
 	flex-direction: column;
@@ -74,4 +89,29 @@
 	border-radius: 18px;
 	box-shadow: 0 8px 32px rgba(38, 18, 59, 0.22);
 	background: #fff;
+}
+
+.logistics-page > h2 {
+  margin-top: 36px;
+  margin-bottom: 12px;
+  color: #4e176e;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.logistics-page > h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #7a26b5 0%, #e8f4fc 100%);
+  border-radius: 2px;
+  margin: 10px auto 0 auto;
+}
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #9330d8;
 }
