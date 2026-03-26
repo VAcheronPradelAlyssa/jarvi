@@ -1,11 +1,12 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-logistics',
   standalone: true,
-  imports: [NgIf, Navbar],
+  imports: [NgIf, RouterModule, Navbar],
   templateUrl: './logistics.html',
   styleUrls: ['./logistics.scss'],
 })
@@ -42,5 +43,8 @@ export class Logistics implements AfterViewInit {
 
   toggleZoom() {
     this.zoomed = !this.zoomed;
+  }
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }
 }

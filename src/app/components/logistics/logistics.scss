@@ -1,3 +1,29 @@
+.bottom-btn-container {
+	display: flex;
+	justify-content: flex-end;
+	margin: 32px 0 0 0;
+	padding-bottom: 64px;
+}
+.bottom-btn {
+	background: linear-gradient(90deg, #7a26b5 80%, #a97be0 100%);
+	color: #fff;
+	font-family: "Fredoka", sans-serif;
+	font-weight: 500;
+	font-size: 1.08em;
+	padding: 0.62em 1.5em;
+	border-radius: 24px;
+	border: none;
+	text-decoration: none;
+	box-shadow: 0 2px 10px #e8e8fc;
+	transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+	cursor: pointer;
+	margin-right: 24px;
+}
+.bottom-btn:hover, .bottom-btn:focus {
+	background: linear-gradient(90deg, #a97be0 0%, #7a26b5 100%);
+	color: #fff;
+	box-shadow: 0 4px 18px #7a26b5;
+}
 .logistics-ps {
 	margin-top: 48px;
 	text-align: center;
