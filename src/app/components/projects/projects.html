@@ -1,1 +1,181 @@
-<p>projects works!</p>
+<section class="projects-page">
+  <div class="project-warning" style="background:#fff3f3;border:1.5px solid #e8bcbc;padding:18px 22px;margin-bottom:28px;border-radius:12px;text-align:center;max-width:800px;margin-left:auto;margin-right:auto;">
+    <strong>Je sais que vous avez dit&nbsp;:</strong> «&nbsp;Attention, ce poste n’est probablement pas fait pour vous si&nbsp;: ❌ Vous êtes nettement plus front que back (vous préférez l’UI, le CSS que la manipulation de données)&nbsp;»<br><br>
+    <span style="color:#b80000;"> Mes projets persos présentés ici sont effectivement 100% front (Angular, TypeScript, SCSS, HTML), car ce sont ceux qui sont utilisés par d’autres aujourd’hui.</span>
+    <br><br>
+    <em>Mais&nbsp;: en alternance, j’ai surtout travaillé côté back&nbsp;: définition d’entités en XML, migration et enrichissement de données, utilisation de repositories pour accéder et manipuler les données de façon sécurisée, intégration d’API externes (ex&nbsp;: Argus pour l’automobile), logique métier, gestion des droits, reporting…</em>
+    <br>
+    <span style="font-size:0.97em;color:#444;">(Exemple&nbsp;: pour l’API Argus, j’ai conçu des méthodes Java pour sauvegarder, enrichir et synchroniser toutes les infos véhicules dans notre base, en veillant à la cohérence, la sécurité et la robustesse des traitements. J’ai aussi travaillé sur la génération de rapports et la validation des accès côté contrôleur.)</span>
+  </div>
+  <h1>Mes réalisations personnelles, Focus sur l’AAPPMA</h1>
+
+  <div class="project-card">
+    <div class="project-content">
+      <h2>
+        Site de l’AAPPMA Brochet Basse Vilaine
+      
+      </h2>
+      <p class="project-urgency">
+        <strong>Contexte :</strong><br>
+        Lorsqu’on m’a confié la reprise du site après sa suppression totale et soudaine, j’ai dû tout reconstruire d’urgence,
+        sans aucune base ni information disponible. J’ai donc recréé le site pour que l’association retrouve rapidement
+        sa présence en ligne et puisse à nouveau informer ses membres.<br>
+        <br>
+        Je suis devenu bénévole à l’AAPPMA en 2023, puis secrétaire de l’association en 2024.
+      </p>
+      <ul class="project-points">
+        <li>
+          <strong>Refonte complète</strong> sous Angular + TypeScript, HTML et SCSS, pour obtenir un site fiable, clair
+          et facile à maintenir.
+        </li>
+        <li>
+          <strong>Périmètre fonctionnel volontairement simple&nbsp;:</strong> tout le contenu (pages, infos, agenda,
+          documents…) est géré à la main dans le code&nbsp;; il n’y a pas d’administration, de formulaire dynamique ni de
+          base de données côté serveur.
+        </li>
+        <li>
+          <strong>Orientation utilisateur&nbsp;:</strong> le but principal était de remettre à disposition toutes les
+          informations essentielles de façon accessible et responsive, même pour un public peu à l’aise avec l’informatique.
+        </li>
+        <li>
+          <strong>Gestion technique :</strong> je m'occupe de tout&nbsp;: ajout/mise à jour du contenu, design,
+          développement et mise en ligne. Toute modification d’infos demande une modification dans le code source.
+        </li>
+      </ul>
+      <div class="project-actions">
+        <a href="https://aappma-brochet-basse-vilaine.eu" target="_blank" class="main-btn">🌐 Découvrir le site</a>
+        <a href="https://github.com/VAcheronPradelAlyssa/aappma" target="_blank" class="secondary-btn">Code sur GitHub</a>
+      </div>
+    </div>
+  </div>
+<div class="project-next-steps">
+  <h3>Prochaines étapes / Améliorations envisageables</h3>
+  <ul>
+    <li>
+      <strong>Ajout d'une base de données & interface d'administration&nbsp;:</strong>
+      <br>
+      - Mise en place d’un back-office sécurisé (accès selon rôle) pour permettre aux bénévoles d’ajouter, modifier ou archiver les articles/news, les événements du calendrier, etc, sans passer par le code.<br>
+      - Utilisation possible : stack Java (Spring Boot) côté serveur avec une base PostgreSQL.
+    </li>
+    <li>
+      <strong>Publication d’annonces, actualités et documents en autonomie&nbsp;:</strong>
+      <br>
+      - Interface simple de rédaction et de gestion des ressources (images, PDF, etc.), avec système de prévisualisation avant publication.
+    </li>
+    <li>
+      <strong>API publique & connecteurs externes&nbsp;:</strong>
+      <br>
+      - Exposition d’API REST sécurisées pour intégrer, par exemple, les calendriers d’événements sur d’autres plateformes, synchroniser des alertes météo/pêche automatisées, ou interfacer des systèmes de paiement pour les adhésions en ligne.
+    </li>
+    <li>
+      <strong>Accessibilité accrue et SEO optimisé&nbsp;:</strong>
+      <br>
+      - Amélioration des contrastes, navigation clavier, lecture facile pour les malvoyants.<br>
+      - Sémantique HTML optimisée, balises OpenGraph, sitemap.xml, meta pour améliorer la visibilité du site sur les moteurs de recherche.
+    </li>
+    <li>
+      <strong>Formulaires dynamiques (contact, inscriptions aux événements, suggestions)...</strong>
+      <br>
+      - Validation côté client/serveur, gestion RGPD basique (consentement, suppression de données sur demande), confirmation email automatique lors d’inscription.
+    </li>
+    
+    <li>
+      <strong>Maintenance facilitée et monitoring :</strong>
+      <br>
+      - Intégration d’outils de supervision (statistiques de fréquentation, alertes en cas de problème serveur, monitoring automatique des pages clés du site).
+    </li>
+    <li>
+      <strong>Hébergement des médias hors du code source&nbsp;:</strong>
+      <br>
+      - Stockage des photos, documents et ressources sur un espace cloud dédié (type Azure Blob, AWS S3, Google Cloud Storage…) pour éviter d’alourdir le dépôt Git et faciliter la gestion/ajout de médias sans redéployer le site.
+    </li>
+  </ul>
+  <div class="project-next-note">
+    Avec ces évolutions, l’association disposerait d’un outil à la fois robuste, autonome et évolutif, capable de s’adapter à tous les besoins futurs : communication, gestion, vie communautaire et valorisation de ses activités… sans dépendre d’un unique développeur.
+  </div>
+</div>
+  <div class="project-note">
+    Ce projet m’a surtout permis de prouver ma réactivité, ma capacité à livrer dans l’urgence,
+    et mon souci du rendu pour des utilisateurs non-tech. Même si la partie gestion de données est très limitée ici,
+    l’expérience m’a motivée à aller bien plus loin (cf. mes autres projets à venir, pensés fullstack).
+  </div>
+</section>
+
+<section class="projects-page">
+  <h2>Portfolio personnel</h2>
+
+  <div class="project-card">
+    <div class="project-content">
+      <h3>
+        Mon Portfolio interactif
+       
+      </h3>
+      <p class="project-urgency">
+        <strong>Contexte :</strong><br>
+        J’ai conçu et développé mon portfolio pour présenter mes réalisations, mettre en avant mes compétences et proposer un espace vivant pour expérimenter de nouvelles idées, animations et concepts UI.
+      </p>
+      <ul class="project-points">
+        <li>
+          <strong>Technos utilisées :</strong> Angular (front complet), SCSS, HTML.
+        </li>
+        <li>
+          <strong>Fonctionnalités :</strong> présentation de projets, navigation animée, design responsive/mobile first, possibilité d’y ajouter des pages ou démos au fil du temps.
+        </li>
+        <li>
+          <strong>Mise à jour :</strong> Chaque ajout/modification de projet, de page ou d’illustration nécessite une intervention dans le code, ce qui me permet de garder une maîtrise totale sur le rendu, le contenu et la structure.
+        </li>
+      </ul>
+      <div class="project-actions">
+        <a href="https://vacheronalyssa.vercel.app" target="_blank" class="main-btn">🌐 Voir le site</a>
+        <a href="https://github.com/VAcheronPradelAlyssa/portfolio-frontend" target="_blank" class="secondary-btn">Code sur GitHub</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="projects-page">
+  <h2>Projets contenant du backend, à venir !</h2>
+
+  <div class="project-note">
+    J’aurais aimé pouvoir vous présenter aujourd’hui un projet complet incluant à la fois du front et du back.
+    Vous êtes simplement arrivées un tout petit peu trop tôt.
+  </div>
+
+  <div class="project-card">
+    <div class="project-content">
+      <h3>Ramène Ta Laine
+        <span class="tech-badge">Angular + Java Spring Boot (en cours)</span>
+      </h3>
+      <p>
+        <strong>Pitch :</strong> Plateforme communautaire d’échanges et de ventes de pelotes de laine et de patrons entre particuliers. L’objectif : centraliser l’offre, simplifier la recherche, permettre des transactions et encourager la création autour du tricot & du crochet.
+      </p>
+      <ul class="project-points">
+        <li>
+          <strong>Back-end :</strong> Développé en Java Spring Boot, il gérera la base de données utilisateurs, produits, commandes, messagerie interne, paiements, publication d’annonces… (base PostgreSQL ou équivalent).
+        </li>
+        <li>
+          <strong>Front-end :</strong> Application Angular moderne et responsive, pour une UX “communauté” accessible sur mobile/destop.
+        </li>
+        <li>
+          <strong>Fonctionnalités prévues :</strong>
+          <ul>
+            <li>Inscription/connexion sécurisée &#40;JWT&#41;</li>
+            <li>Création/suivi d’annonces, gestion du catalogue</li>
+            <li>Achat/vente entre membres, paiement Stripe</li>
+            <li>Messagerie intégrée entre utilisateurs</li>
+            <li>Notifications, favoris, historique</li>
+          </ul>
+        </li>
+        <li>
+          <strong>État d’avancement :</strong> J’ai déjà finalisé le cahier des charges, la première version des modèles de données, et les premières maquettes de l’interface (<em>voir exemple ci-dessous si besoin</em>).
+        </li>
+      </ul>
+      <div class="project-next-note">
+        <strong>Prochaines étapes :</strong> Démarrage du développement technique courant 2026 (API REST, gestion sécurisée des données, interface d’administration pour modération et gestion des contenus). Ce projet a pour but de montrer toute ma maîtrise d’un workflow fullstack moderne.
+      </div>
+      <!--schéma, une maquette -->
+
+    </div>
+  </div>
+</section>
