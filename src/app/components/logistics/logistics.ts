@@ -1,10 +1,11 @@
 import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-logistics',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, Navbar],
   templateUrl: './logistics.html',
   styleUrls: ['./logistics.scss'],
 })

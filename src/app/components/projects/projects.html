@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <section class="projects-page">
   <div class="project-warning" style="background:#fff3f3;border:1.5px solid #e8bcbc;padding:18px 22px;margin-bottom:28px;border-radius:12px;text-align:center;max-width:800px;margin-left:auto;margin-right:auto;">
     <strong>Je sais que vous avez dit&nbsp;:</strong> «&nbsp;Attention, ce poste n’est probablement pas fait pour vous si&nbsp;: ❌ Vous êtes nettement plus front que back (vous préférez l’UI, le CSS que la manipulation de données)&nbsp;»<br><br>
@@ -157,7 +158,6 @@
   </div>
 
 </section>
-
 <section class="projects-page">
   <h2 class="titlebis">Projets contenant du backend, à venir !</h2>
 
@@ -168,98 +168,112 @@
 
   <div class="project-card">
     <div class="project-content">
-      <h2 class="step-title">Ramène Ta Laine (en cours)
-      </h2>
+      <h2 class="step-title">Ramène Ta Laine (en cours)</h2>
       <p>
-        <strong>Pitch :</strong> Plateforme communautaire d’échanges et de ventes de pelotes de laine et de patrons entre particuliers. L’objectif : centraliser l’offre, simplifier la recherche, permettre des transactions et encourager la création autour du tricot & du crochet.
+        <strong>Pitch :</strong> Plateforme communautaire d’échanges, de ventes et d’achats de pelotes de laine, de patrons numériques et de matériel de tricot/crochet entre particuliers. Objectif : centraliser l’offre, simplifier la recherche, permettre des transactions sécurisées et encourager la création autour du tricot & du crochet.
       </p>
       <ul class="project-points">
         <li>
-          <strong>Back-end :</strong> Développé en Java Spring Boot, il gérera la base de données utilisateurs, produits, commandes, messagerie interne, paiements, publication d’annonces… (base PostgreSQL ou équivalent).
+          <strong>Back-end :</strong> Java Spring Boot (REST API), gestion des utilisateurs, annonces, commandes, messagerie, paiement Stripe, publication d’annonces/patrons… (base PostgreSQL ou équivalent).
         </li>
         <li>
-          <strong>Front-end :</strong> Application Angular moderne et responsive, pour une UX “communauté” accessible sur mobile/destop.
+          <strong>Front-end :</strong> Application Angular responsive pour une UX “communauté”, accessible sur mobile et desktop.
         </li>
         <li>
           <strong>Fonctionnalités prévues :</strong>
           <ul>
-            <li>Inscription/connexion sécurisée &#40;JWT&#41;</li>
-            <li>Création/suivi d’annonces, gestion du catalogue</li>
-            <li>Achat/vente entre membres, paiement Stripe</li>
-            <li>Messagerie intégrée entre utilisateurs</li>
+            <li>Inscription/connexion sécurisée (JWT)</li>
+            <li>Création et gestion d’annonces, mise en vente et achat de pelotes</li>
+            <li>Publication, vente & achat de <strong>patrons numériques PDF</strong> (bibliothèque personnelle et téléchargement)</li>
+            <li>Paiement intégré (Stripe)</li>
+            <li>Messagerie interne membres</li>
             <li>Notifications, favoris, historique</li>
+            <li>Recherche avancée (filtres laine, patrons, catégorie…)</li>
           </ul>
         </li>
         <li>
-          <strong>État d’avancement :</strong> J’ai déjà finalisé le cahier des charges, la première version des modèles de données, et les premiers écrans du front Angular.
+          <strong>État d’avancement :</strong> Cahier des charges complet, premières maquettes visuelles et modèles de données établis, début du développement Angular.
         </li>
       </ul>
       <div class="project-next-note">
-        <strong>Prochaines étapes :</strong> Démarrage du développement technique courant 2026 (API REST, gestion sécurisée des données, interface d’administration pour modération et gestion des contenus).<br>
-        <em>L’objectif principal de ce projet est d’offrir enfin une vraie plateforme indépendante pour la communauté, afin de ne plus dépendre de Facebook pour les échanges, annonces et partages autour du tricot et du crochet.</em>
+        <strong>Prochaines étapes :</strong> Développement technique courant 2026 : mise en place des endpoints, gestion sécurité, administration, puis front complet.<br>
+        <em>L’objectif est d’offrir, enfin, à la communauté une alternative saine, indépendante et pérenne aux groupes Facebook pour les échanges tricot/crochet/patrons.</em>
       </div>
       <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/accueillaine.png" alt="Accueil Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/accueillaine.png')" />
+          <img src="/assets/projects/laine/accueillaine.png" alt="Accueil Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil (front réel)</figcaption>
         </figure>
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/annoncelaine.png" alt="Annonce Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/annoncelaine.png')" />
+          <img src="/assets/projects/laine/annoncelaine.png" alt="Annonce Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Exemple d'annonce (front réel)</figcaption>
         </figure>
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/inscriptionlaine.png" alt="Inscription Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/inscriptionlaine.png')" />
+          <img src="/assets/projects/laine/inscriptionlaine.png" alt="Inscription Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Inscription (front réel)</figcaption>
         </figure>
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/db.png" alt="Base de données Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/db.png')" />
+          <img src="/assets/projects/laine/db.png" alt="Base de données Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Base de données</figcaption>
         </figure>
       </div>
-      <div *ngIf="zoomedScreenshot" class="screenshot-zoom-overlay" (click)="closeScreenshot()">
-        <img [src]="zoomedScreenshot" alt="Capture d'écran agrandie" class="screenshot-zoomed" />
-      </div>
-
     </div>
   </div>
 </section>
 
 <section id="independantfish-project" class="projects-page independantfish-section">
-  <h2 class="step-title independantfish-title">
-    Independant'fish, Marketplace de pêche artisanale et occasion
-    <span class="independantfish-badge">projet à venir, objectif fin 2026</span>
-  </h2>
-  <p class="independantfish-warning">
-    <strong>Ce projet n’est pas encore réalisé&nbsp;: c’est un objectif personnel que j’espère concrétiser avant la fin de l’année.</strong>
-  </p>
-  <p>
-    L’idée&nbsp;: créer une plateforme web permettant&nbsp;:
-  </p>
-  <ul>
-    <li>Aux artisans de vendre leurs créations originales (leurres, matériel, accessoires),</li>
-    <li>Aux passionnés de pêche de trouver ou revendre du matériel d’occasion,</li>
-    <li>D’animer une véritable communauté via des boutiques personnalisées, des avis, et un futur forum d’échanges.</li>
-  </ul>
-  <p>
-    L’interface mettrait en avant chaque semaine un artisan et proposerait un navigateur de produits, des fiches boutiques, des évaluations clients ainsi qu’un espace de contact et de FAQ.<br>
-    <span style="color:#7a26b5;font-weight:500">Les premières maquettes de ce projet ont été réalisées avec <strong>Visily</strong> pour visualiser le concept.</span>
-  </p>
-  <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
-    <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-independant'fish-artisan-shop.png" alt="Boutique artisan Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-      <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Boutique artisanale</figcaption>
-    </figure>
-    <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-independant'fish-homepage.png" alt="Accueil Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-      <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil</figcaption>
-    </figure>
-    <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-independant'fish-second-hand-listings.png" alt="Marketplace occasion Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-      <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Marketplace d’occasion</figcaption>
-    </figure>
-    <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-lurepro-product-page.png" alt="Fiche produit Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-      <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Fiche produit</figcaption>
-    </figure>
+  <div class="project-card">
+    <div class="project-content">
+      <h2 class="step-title independantfish-title">
+        Independant'fish (en réflexion)
+        <span class="independantfish-badge">projet personnel, objectif fin 2026</span>
+      </h2>
+      <p>
+        <strong>Pitch :</strong> Marketplace de pêche nouvelle génération : mise en avant des artisans créateurs (leurres, plombs, accessoires…) et vente de matériel d’occasion spécialisé pour passionnés de pêche. Le but : rassembler professionnels/artisans indépendants et communauté pêche autour d’une plateforme unique.
+      </p>
+      <ul class="project-points">
+        <li>
+          <strong>Back-end :</strong> Java Spring Boot (API REST), gestion utilisateurs, boutiques, annonces, commandes, messagerie, paiements, système d’avis et forum. Base PostgreSQL/Supabase prévue.
+        </li>
+        <li>
+          <strong>Front-end :</strong> Angular (web app responsive, mobile-first), navigation rapide et mise en avant visuelle des artisans chaque semaine.
+        </li>
+        <li>
+          <strong>Fonctionnalités annoncées :</strong>
+          <ul>
+            <li>Mises en avant d'un artisan chaque semaine sur la home</li>
+            <li>Création de boutiques artisans, gestion produits/vitrine, avis clients</li>
+            <li>Vente de matériel de pêche d’occasion, filtrable par type, prix, état, localisation</li>
+            <li>Messagerie & commandes intégrées</li>
+            <li>Forum / Q&R communautaire (évolution future)</li>
+            <li>Système d’abonnement info/newsletter, contacts client/artisan</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Maquettage & outils :</strong> Premières maquettes réalisées sur <strong>Visily</strong> (apprentissage prototypage UI/UX)
+        </li>
+      </ul>
+      <div class="project-next-note">
+        <strong>Prochaines étapes :</strong> Affinage du cahier des charges, structuration de la base, puis développement technique progressif courant 2026.
+      </div>
+      <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
+        <figure style="margin:0;max-width:320px;text-align:center;">
+          <img src="/assets/projects/independantfish/visily-independant'fish-artisan-shop.png" alt="Boutique artisan Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Boutique artisanale</figcaption>
+        </figure>
+        <figure style="margin:0;max-width:320px;text-align:center;">
+          <img src="/assets/projects/independantfish/visily-independant'fish-homepage.png" alt="Accueil Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil</figcaption>
+        </figure>
+        <figure style="margin:0;max-width:320px;text-align:center;">
+          <img src="/assets/projects/independantfish/visily-independant'fish-second-hand-listings.png" alt="Marketplace occasion Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Marketplace d’occasion</figcaption>
+        </figure>
+        <figure style="margin:0;max-width:320px;text-align:center;">
+          <img src="/assets/projects/independantfish/visily-lurepro-product-page.png" alt="Fiche produit Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Fiche produit</figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 </section>
