@@ -1,4 +1,10 @@
 <app-navbar></app-navbar>
+<div *ngIf="zoomedScreenshot" class="screenshot-zoom-overlay" (click)="closeScreenshot()">
+  <div class="zoom-img-container">
+    <img [src]="zoomedScreenshot" class="screenshot-zoomed" alt="Agrandissement de la capture" />
+  </div>
+  <div class="zoom-hint">Cliquez n'importe où pour fermer</div>
+</div>
 <section class="projects-page">
   <div class="project-warning" style="background:#fff3f3;border:1.5px solid #e8bcbc;padding:18px 22px;margin-bottom:28px;border-radius:12px;text-align:center;max-width:800px;margin-left:auto;margin-right:auto;">
     <strong>Je sais que vous avez dit&nbsp;:</strong> «&nbsp;Attention, ce poste n’est probablement pas fait pour vous si&nbsp;: ❌ Vous êtes nettement plus front que back (vous préférez l’UI, le CSS que la manipulation de données)&nbsp;»<br><br>
@@ -200,19 +206,19 @@
       </div>
       <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/accueillaine.png" alt="Accueil Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <img src="/assets/projects/laine/accueillaine.png" alt="Accueil Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/accueillaine.png')" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil (front réel)</figcaption>
         </figure>
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/annoncelaine.png" alt="Annonce Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <img src="/assets/projects/laine/annoncelaine.png" alt="Annonce Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/annoncelaine.png')" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Exemple d'annonce (front réel)</figcaption>
         </figure>
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/inscriptionlaine.png" alt="Inscription Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <img src="/assets/projects/laine/inscriptionlaine.png" alt="Inscription Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/inscriptionlaine.png')" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Inscription (front réel)</figcaption>
         </figure>
         <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/laine/db.png" alt="Base de données Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+          <img src="/assets/projects/laine/db.png" alt="Base de données Ramène Ta Laine" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/laine/db.png')" />
           <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Base de données</figcaption>
         </figure>
       </div>
@@ -256,23 +262,39 @@
         <strong>Prochaines étapes :</strong> Affinage du cahier des charges, structuration de la base, puis développement technique progressif courant 2026.
       </div>
       <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
-        <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/independantfish/visily-independant'fish-artisan-shop.png" alt="Boutique artisan Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Boutique artisanale</figcaption>
-        </figure>
-        <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/independantfish/visily-independant'fish-homepage.png" alt="Accueil Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil</figcaption>
-        </figure>
-        <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/independantfish/visily-independant'fish-second-hand-listings.png" alt="Marketplace occasion Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Marketplace d’occasion</figcaption>
-        </figure>
-        <figure style="margin:0;max-width:320px;text-align:center;">
-          <img src="/assets/projects/independantfish/visily-lurepro-product-page.png" alt="Fiche produit Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
-          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Fiche produit</figcaption>
-        </figure>
-      </div>
+  <figure style="margin:0;max-width:320px;text-align:center;">
+    <img src="/assets/projects/independantfish/visily-independant'fish-artisan-shop.png"
+      alt="Boutique artisan Independant'fish"
+      class="zoomable-img"
+      style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;"
+      (click)="openScreenshot('/assets/projects/independantfish/visily-independant\'fish-artisan-shop.png')" />
+    <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Boutique artisanale</figcaption>
+  </figure>
+  <figure style="margin:0;max-width:320px;text-align:center;">
+    <img src="/assets/projects/independantfish/visily-independant'fish-homepage.png"
+      alt="Accueil Independant'fish"
+      class="zoomable-img"
+      style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;"
+      (click)="openScreenshot('/assets/projects/independantfish/visily-independant\'fish-homepage.png')" />
+    <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil</figcaption>
+  </figure>
+  <figure style="margin:0;max-width:320px;text-align:center;">
+    <img src="/assets/projects/independantfish/visily-independant'fish-second-hand-listings.png"
+      alt="Marketplace occasion Independant'fish"
+      class="zoomable-img"
+      style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;"
+      (click)="openScreenshot('/assets/projects/independantfish/visily-independant\'fish-second-hand-listings.png')" />
+    <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Marketplace d’occasion</figcaption>
+  </figure>
+  <figure style="margin:0;max-width:320px;text-align:center;">
+    <img src="/assets/projects/independantfish/visily-lurepro-product-page.png"
+      alt="Fiche produit Independant'fish"
+      class="zoomable-img"
+      style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;"
+      (click)="openScreenshot('/assets/projects/independantfish/visily-lurepro-product-page.png')" />
+    <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Fiche produit</figcaption>
+  </figure>
+</div>
     </div>
   </div>
 </section>
