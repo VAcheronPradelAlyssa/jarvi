@@ -1,0 +1,51 @@
+.zoomable-img {
+	cursor: zoom-in;
+	transition: box-shadow 0.2s;
+}
+.zoomable-img:hover {
+	box-shadow: 0 4px 24px #b39ddb;
+}
+.screenshot-zoom-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(38, 18, 59, 0.45);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+	cursor: zoom-out;
+	overflow: hidden;
+}
+.zoom-img-container {
+	max-width: 94vw;
+	max-height: 94vh;
+	overflow: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+}
+.screenshot-zoomed {
+	max-width: 100vw;
+	max-height: 100vh;
+	border-radius: 18px;
+	box-shadow: 0 8px 32px #7a26b5;
+	background: #fff;
+	transition: transform 0.1s;
+	touch-action: none;
+	user-select: none;
+}
+.zoom-hint {
+	position: absolute;
+	bottom: 32px;
+	left: 0;
+	width: 100vw;
+	text-align: center;
+	color: #fff;
+	font-size: 1.1em;
+	text-shadow: 0 2px 8px #000a;
+	pointer-events: none;
+}
