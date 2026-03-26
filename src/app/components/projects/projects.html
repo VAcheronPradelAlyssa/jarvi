@@ -11,9 +11,8 @@
 
   <div class="project-card">
     <div class="project-content">
-      <h2>
+      <h2 class="step-title">
         Site de l’AAPPMA Brochet Basse Vilaine
-      
       </h2>
       <p class="project-urgency">
         <strong>Contexte :</strong><br>
@@ -116,7 +115,7 @@
 </section>
 
 <section class="projects-page">
-  <h2>Portfolio personnel</h2>
+  <h2 class="step-title">Portfolio personnel</h2>
 
   <div class="project-card">
     <div class="project-content">
@@ -140,24 +139,37 @@
         <a href="https://vacheronalyssa.vercel.app" target="_blank" class="main-btn">🌐 Voir le site</a>
         <a href="https://github.com/VAcheronPradelAlyssa/portfolio-frontend" target="_blank" class="secondary-btn">Code sur GitHub</a>
       </div>
+      <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
+        <figure style="margin:0;max-width:320px;text-align:center;">
+          <img src="/assets/projects/portoflio/portfolio.png" alt="Accueil Portfolio" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/portoflio/portfolio.png')" />
+          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil du portfolio</figcaption>
+        </figure>
+        <figure style="margin:0;max-width:320px;text-align:center;">
+          <img src="/assets/projects/portoflio/parcours.png" alt="Page Parcours Portfolio" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/portoflio/parcours.png')" />
+          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Page parcours</figcaption>
+        </figure>
+        <figure style="margin:0;max-width:320px;text-align:center;">
+          <img src="/assets/projects/portoflio/voiture.png" alt="Page Voiture Portfolio" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/portoflio/voiture.png')" />
+          <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Page Qui suis-je</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
 </section>
 
 <section class="projects-page">
-  <h2>Projets contenant du backend, à venir !</h2>
+  <h2 class="titlebis">Projets contenant du backend, à venir !</h2>
 
   <div class="project-note">
     J’aurais aimé pouvoir vous présenter aujourd’hui un projet complet incluant à la fois du front et du back.
-    Vous êtes simplement arrivées un tout petit peu trop tôt.
+    Mais vous êtes arrivées un tout petit peu trop tôt.
   </div>
 
   <div class="project-card">
     <div class="project-content">
-      <h3>Ramène Ta Laine
-        <span class="tech-badge">Angular + Java Spring Boot (en cours)</span>
-      </h3>
+      <h2 class="step-title">Ramène Ta Laine (en cours)
+      </h2>
       <p>
         <strong>Pitch :</strong> Plateforme communautaire d’échanges et de ventes de pelotes de laine et de patrons entre particuliers. L’objectif : centraliser l’offre, simplifier la recherche, permettre des transactions et encourager la création autour du tricot & du crochet.
       </p>
@@ -212,50 +224,42 @@
   </div>
 </section>
 
-<section id="independantfish-project">
-  <section id="independantfish-project" class="independantfish-section">
-    <h2 class="independantfish-title">Independant'fish, Marketplace de pêche artisanale et occasion <span class="independantfish-badge">projet à venir, objectif fin 2026</span></h2>
-    <p class="independantfish-warning">
-      <strong>Ce projet n’est pas encore réalisé&nbsp;: c’est un objectif personnel que j’espère concrétiser avant la fin de l’année.</strong>
-    </p>
-    <p>
-      L’idée&nbsp;: créer une plateforme web permettant&nbsp;:
-    </p>
-    <ul>
-      <li>Aux artisans de vendre leurs créations originales (leurres, matériel, accessoires),</li>
-      <li>Aux passionnés de pêche de trouver ou revendre du matériel d’occasion,</li>
-      <li>D’animer une véritable communauté via des boutiques personnalisées, des avis, et un futur forum d’échanges.</li>
-    </ul>
-    <p>
-      L’interface mettrait en avant chaque semaine un artisan et proposerait un navigateur de produits, des fiches boutiques, des évaluations clients ainsi qu’un espace de contact et de FAQ.<br>
-      <span style="color:#7a26b5;font-weight:500">Les premières maquettes de ce projet ont été réalisées avec <strong>Visily</strong> pour visualiser le concept.</span>
-    </p>
-    <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
-      <!-- ...existing code for screenshots... -->
-    </div>
-    <div *ngIf="zoomedScreenshot" class="screenshot-zoom-overlay" (click)="closeScreenshot()">
-      <img [src]="zoomedScreenshot" alt="Capture d'écran Independant'fish agrandie" class="screenshot-zoomed" />
-    </div>
-  </section>
+<section id="independantfish-project" class="projects-page independantfish-section">
+  <h2 class="step-title independantfish-title">
+    Independant'fish, Marketplace de pêche artisanale et occasion
+    <span class="independantfish-badge">projet à venir, objectif fin 2026</span>
+  </h2>
+  <p class="independantfish-warning">
+    <strong>Ce projet n’est pas encore réalisé&nbsp;: c’est un objectif personnel que j’espère concrétiser avant la fin de l’année.</strong>
+  </p>
+  <p>
+    L’idée&nbsp;: créer une plateforme web permettant&nbsp;:
+  </p>
+  <ul>
+    <li>Aux artisans de vendre leurs créations originales (leurres, matériel, accessoires),</li>
+    <li>Aux passionnés de pêche de trouver ou revendre du matériel d’occasion,</li>
+    <li>D’animer une véritable communauté via des boutiques personnalisées, des avis, et un futur forum d’échanges.</li>
+  </ul>
+  <p>
+    L’interface mettrait en avant chaque semaine un artisan et proposerait un navigateur de produits, des fiches boutiques, des évaluations clients ainsi qu’un espace de contact et de FAQ.<br>
+    <span style="color:#7a26b5;font-weight:500">Les premières maquettes de ce projet ont été réalisées avec <strong>Visily</strong> pour visualiser le concept.</span>
+  </p>
   <div class="project-screenshots" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px;">
     <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-independant'fish-artisan-shop.png" alt="Boutique artisan Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/independantfish/visily-independant\'fish-artisan-shop.png')" />
+      <img src="/assets/projects/independantfish/visily-independant'fish-artisan-shop.png" alt="Boutique artisan Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
       <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Boutique artisanale</figcaption>
     </figure>
     <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-independant'fish-homepage.png" alt="Accueil Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/independantfish/visily-independant\'fish-homepage.png')" />
+      <img src="/assets/projects/independantfish/visily-independant'fish-homepage.png" alt="Accueil Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
       <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Accueil</figcaption>
     </figure>
     <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-independant'fish-second-hand-listings.png" alt="Marketplace occasion Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/independantfish/visily-independant\'fish-second-hand-listings.png')" />
+      <img src="/assets/projects/independantfish/visily-independant'fish-second-hand-listings.png" alt="Marketplace occasion Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
       <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Marketplace d’occasion</figcaption>
     </figure>
     <figure style="margin:0;max-width:320px;text-align:center;">
-      <img src="/assets/projects/independantfish/visily-lurepro-product-page.png" alt="Fiche produit Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" (click)="openScreenshot('/assets/projects/independantfish/visily-lurepro-product-page.png')" />
-      <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Fiche produit </figcaption>
+      <img src="/assets/projects/independantfish/visily-lurepro-product-page.png" alt="Fiche produit Independant'fish" class="zoomable-img" style="width:100%;border-radius:10px;box-shadow:0 2px 10px #e8e8fc;cursor:zoom-in;" />
+      <figcaption style="font-size:0.97em;color:#555;margin-top:6px;">Fiche produit</figcaption>
     </figure>
-  </div>
-  <div *ngIf="zoomedScreenshot" class="screenshot-zoom-overlay" (click)="closeScreenshot()">
-    <img [src]="zoomedScreenshot" alt="Capture d'écran Independant'fish agrandie" class="screenshot-zoomed" />
   </div>
 </section>
