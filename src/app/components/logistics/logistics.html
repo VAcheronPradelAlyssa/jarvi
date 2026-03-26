@@ -1,8 +1,10 @@
+<app-navbar></app-navbar>
 <section class="logistics-page">
 	<h1 class="main-title">Gérer mon Déplacement à Rennes le mercredi</h1>
 
 	<h2 class="step-title">Dans un premier temps :</h2>
-	<video class="logistics-video" src="/assets/logistics/voiture.mp4" autoplay loop muted playsinline></video>
+	<video #voitureVideo class="logistics-video" src="/assets/logistics/voiture.mp4" autoplay loop muted playsinline></video>
+	<button class="video-replay-btn" type="button" (click)="replayVideo('voiture')">Relancer la vidéo voiture</button>
 	<div class="logistics-text">
 		<p>Je descendrais avec ma super voiture&nbsp;:</p>
 
@@ -18,9 +20,16 @@
 	</div>
 
 	<h2 class="step-title">Dans un second temps :</h2>
-	<video class="logistics-video" src="/assets/logistics/train.mp4" autoplay loop muted playsinline></video>
+	<video #trainVideo class="logistics-video" src="/assets/logistics/train.mp4" autoplay loop muted playsinline></video>
+	<button class="video-replay-btn" type="button" (click)="replayVideo('train')">Relancer la vidéo train</button>
 	<div class="logistics-text">
 		<p>Je descendrais en train, pour des conditions écologiques et économiques (elle consomme un peu trop 🤭).</p>
 		<p>Même schéma&nbsp;: j'irais dormir quelque part que j'aurais réservé. Pour être sûr, une fois embauché, je ferais toutes mes réservations à l'avance pour être tranquille.</p>
 	</div>
+	<footer class="logistics-ps">
+		<span><strong>PS :</strong> Le but ultime est de retourner vivre en Bretagne un jour&nbsp;! </span>
+	</footer>
 </section>
+<div class="bottom-btn-container">
+	<a routerLink="/projects" class="bottom-btn" (click)="scrollToTop()">Voir les projets →</a>
+</div>
