@@ -1,3 +1,12 @@
+p, ul, ol, li {
+	font-size: clamp(1.13rem, 2.2vw, 1.22rem);
+	line-height: 1.7;
+}
+/* Augmentation de la taille des paragraphes pour une meilleure lisibilité */
+p {
+	font-size: clamp(1.13rem, 2.2vw, 1.22rem);
+	line-height: 1.7;
+}
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap");
 
